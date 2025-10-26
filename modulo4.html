@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,74 +19,75 @@
             </div>
         </a>
 
-        <nav>
+        <nav class="nav-desktop">
             <ul>
-                <li><a href="index.html#homenagens">
-                        Depoimento Instrutores</a>
-                </li>
-                <li><a href="index.html#monitores">
-                        Monitores</a>
-                </li>
-                <li><a href="index.html#horarios">
-                        Horários</a>
-                </li>
-                <li><a href="index.html#modulos">
-                        Módulos</a>
-                </li>
-                <li><a href="index.html#fotos">
-                        Galeria</a>
-                </li>
+                <li><a href="index.html#homenagens">Depoimento Instrutores</a></li>
+                <li><a href="index.html#monitores">Monitores</a></li>
+                <li><a href="index.html#horarios">Horários</a></li>
+                <li><a href="index.html#modulos">Módulos</a></li>
+                <li><a href="index.html#fotos">Galeria</a></li>
             </ul>
         </nav>
+
+        <button class="hamburger-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <main class="modulo">
-        <h1>
-            Módulo 4: Desenvolver um Jogo
-        </h1>
-        <div class="modulo-grid">
-            <div class="modulo-img">
-                <img src="images/modulos/modulo4.png" alt="Desenvolver um Jogo">
+        <section class="container-modulo">
+            <h1>Módulo 4: Desenvolver um Jogo</h1>
+
+            <div class="conteudo-modulo">
+                <div class="imagem-modulo">
+                    <img src="images/modulos/modulo4.png" alt="Desenvolver um Jogo">
+                </div>
+
+                <div class="texto-modulo">
+                    <p class="descricao">
+                        Neste módulo, aprendemos a unir lógica de programação e criatividade para desenvolver um jogo
+                        interativo do zero.
+                    </p>
+
+                    <ul class="topicos">
+                        <li>✔ Planejamento do jogo: definição da ideia, regras e mecânicas principais</li>
+                        <li>✔ Uso do HTML e CSS: para criar a estrutura visual e o estilo do jogo</li>
+                        <li>✔ JavaScript: para programar a lógica, movimentos, interações e pontuação</li>
+                        <li>✔ Eventos do teclado e do mouse: controlar personagens e interagir com elementos</li>
+                        <li>✔ Animações: dar vida ao jogo com movimentos dinâmicos</li>
+                    </ul>
+
+                    <p class="importancia">
+                        Este módulo mostrou como a programação pode ser usada para criar experiências interativas e reforçou
+                        a importância da lógica, da criatividade e da persistência na construção de projetos maiores.
+                    </p>
+
+                    <a href="index.html#modulos" class="btn-voltar">
+                        ← Voltar para os módulos
+                    </a>
+                </div>
             </div>
-            <div class="modulo-texto">
-                <p class="descricao">
-                    Neste módulo, aprendemos a unir lógica de programação e criatividade para desenvolver um jogo
-                    interativo do zero.
-                </p>
-
-                <ul class="topicos">
-                    <li>
-                        Planejamento do jogo: definição da ideia, regras e mecânicas principais.
-                    </li>
-
-                    <li>
-                        Uso do HTML e CSS: para criar a estrutura visual e o estilo do jogo.
-                    </li>
-
-                    <li>
-                        JavaScript: para programar a lógica, movimentos, interações e pontuação.
-                    </li>
-
-                    <li>
-                        Eventos do teclado e do mouse: controlar personagens e interagir com elementos da tela.
-                    </li>
-
-                    <li>
-                        Animações: dar vida ao jogo com movimentos dinâmicos.
-                    </li>
-                </ul>
-
-                <p class="importancia">
-                    Este módulo mostrou como a programação pode ser usada para criar experiências interativas e reforçou
-                    a importância da lógica, da criatividade e da persistência na construção de projetos maiores.
-                </p>
-
-                <a onclick="history.back()" class="btn-voltar">
-                    ← Voltar para os módulos
-                </a>
-            </div>
-        </div>
+        </section>
     </main>
+
+    <!-- Menu Mobile -->
+    <div class="nav-mobile">
+        <div class="nav-mobile-content">
+            <button class="close-btn" aria-label="Fechar menu">×</button>
+            <ul>
+                <li><a href="index.html#homenagens">Depoimento Instrutores</a></li>
+                <li><a href="index.html#monitores">Monitores</a></li>
+                <li><a href="index.html#horarios">Horários</a></li>
+                <li><a href="index.html#modulos">Módulos</a></li>
+                <li><a href="index.html#fotos">Galeria</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Overlay do Menu -->
+    <div class="menu-overlay"></div>
 
     <footer>
         <div class="footer-content">
@@ -99,44 +99,87 @@
             <div class="footer-nav-container">
                 <nav class="footer-nav">
                     <ul>
-                        <li><a href="index.html">
-                                Início</a>
-                        </li>
-                        <li><a href="index.html#homenagens">
-                                Depoimento Instrutores</a>
-                        </li>
-                        <li><a href="index.html#monitores">
-                                Monitores</a>
-                        </li>
-                        <li><a href="index.html#horarios">
-                                Horários</a>
-                        </li>
-                        <li><a href="index.html#modulos">
-                                Módulos</a>
-                        </li>
-                        <li><a href="index.html#fotos">
-                                Galeria</a>
-                        </li>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html#homenagens">Depoimento Instrutores</a></li>
+                        <li><a href="index.html#monitores">Monitores</a></li>
+                        <li><a href="index.html#horarios">Horários</a></li>
+                        <li><a href="index.html#modulos">Módulos</a></li>
+                        <li><a href="index.html#fotos">Galeria</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="redes-sociais">
                 <a href="https://www.instagram.com/unifillondrina" target="_blank">
                     <img src="images/icons/instagram.png" alt="Logo Instagram"></a>
-
                 <a href="https://x.com/unifiloficial" target="_blank">
                     <img src="images/icons/twitter.png" alt="Logo X"></a>
-
                 <a href="https://www.facebook.com/UnifilLondrinafanpage/?locale=pt_BR" target="_blank">
                     <img src="images/icons/facebook.png" alt="Logo Facebook"></a>
-
                 <a href="https://www.tiktok.com/@unifillondrina?is_from_webapp=1&sender_device=pc" target="_blank">
                     <img src="images/icons/tiktok.png" alt="Logo Tiktok"></a>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <!-- JAVASCRIPT (MESMO CÓDIGO QUE FUNCIONOU) -->
+    <script>
+        // DEBUG - Verifica se elementos existem
+        console.log('=== DEBUG MENU MÓDULO 4 ===');
+        console.log('Hamburger:', document.querySelector('.hamburger-btn'));
+        console.log('Nav Mobile:', document.querySelector('.nav-mobile'));
+        console.log('Close Button:', document.querySelector('.close-btn'));
+        console.log('Btn Voltar:', document.querySelector('.btn-voltar'));
 
+        // MENU HAMBURGUER
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-btn');
+            const navMobile = document.querySelector('.nav-mobile');
+            const closeBtn = document.querySelector('.close-btn');
+            
+            if (hamburger && navMobile && closeBtn) {
+                console.log('✅ Elementos do menu encontrados!');
+                
+                const overlay = document.querySelector('.menu-overlay');
+                
+                function openMenu() {
+                    console.log('Abrindo menu...');
+                    navMobile.classList.add('active');
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+                
+                function closeMenu() {
+                    console.log('Fechando menu...');
+                    navMobile.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+                
+                hamburger.addEventListener('click', openMenu);
+                closeBtn.addEventListener('click', closeMenu);
+                overlay.addEventListener('click', closeMenu);
+                
+                const navLinks = navMobile.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', closeMenu);
+                });
+            }
+        });
+
+        // BOTÃO VOLTAR
+        document.addEventListener('DOMContentLoaded', function() {
+            const btnVoltar = document.querySelector('.btn-voltar');
+            
+            if (btnVoltar) {
+                console.log('✅ Botão voltar encontrado!');
+                
+                btnVoltar.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Clicou em voltar!');
+                    window.location.href = 'index.html#modulos';
+                });
+            }
+        });
+    </script>
+</body>
 </html>
