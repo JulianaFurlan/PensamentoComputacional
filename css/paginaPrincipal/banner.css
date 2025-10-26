@@ -1,23 +1,10 @@
-#imagem-banner img {
+#imagem-banner {
     width: 100%;
-    height: auto;
-    max-height: 58vh;
-    object-fit: cover;
-    display: block;
-    margin-top: 120px;
-    margin-bottom: 40px;
 }
 
-@media (max-width: 768px) {
-    #imagem-banner img {
-        margin-top: 90px;
-        max-height: 50vh;
-    }
-
-    .carrossel {
-        border-radius: 0;
-        box-shadow: none;
-    }
+/* ===== DESKTOP BANNER ===== */
+.desktop-banner {
+    display: block;
 }
 
 .carrossel {
@@ -43,26 +30,51 @@
     flex-shrink: 0;
 }
 
+#imagem-banner img {
+    width: 100%;
+    height: auto;
+    max-height: 58vh;
+    object-fit: cover;
+    display: block;
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
+
+/* ===== MOBILE PARALLAX ===== */
+.mobile-banner {
+    display: none;
+}
+
+.parallax-mobile {
+    height: 50vh;
+    background-image: url('/images/logos/logoNovaMobile.png'); /* Escolha a melhor imagem */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 90px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
-
-    #imagem-banner img {
-        margin-top: 100px;
-        margin-bottom: 30px;
+    /* Esconde carrossel desktop */
+    .desktop-banner {
+        display: none;
     }
-
-    .carrossel {
-        border-radius: 0;
-        box-shadow: none;
-    }
-
-    .slides img {
-        max-height: 50vh;
+    
+    /* Mostra parallax mobile */
+    .mobile-banner {
+        display: block;
     }
 }
 
-@media (max-width: 480px) {
-    #imagem-banner img {
-        margin-top: 80px;
-        max-height: 45vh;
+@media (min-width: 769px) {
+    /* Garante que só mostra um por vez */
+    .desktop-banner {
+        display: block;
+    }
+    
+    .mobile-banner {
+        display: none;
     }
 }

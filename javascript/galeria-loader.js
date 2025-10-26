@@ -106,57 +106,6 @@ function abrirLightbox(ano, index) {
     }
 }
 
-// Adicione estas funções no final do galeria-loader.js
-
-// ===== FUNÇÕES VER MAIS =====
-function inicializarBotoesVerMais() {
-    if (window.innerWidth > 768) {
-        document.querySelectorAll('.carrossel-galeria').forEach(carrossel => {
-            carrossel.classList.add('mostrar-todas');
-        });
-        return;
-    }
-    
-    const containers = document.querySelectorAll('.ano-container');
-    
-    containers.forEach(container => {
-        const carrossel = container.querySelector('.carrossel-galeria');
-        if (!carrossel) return;
-        
-        const fotos = carrossel.querySelectorAll('.foto-item');
-        
-        if (fotos.length > 3) {
-            criarBotaoVerMais(container, carrossel, fotos.length);
-        } else {
-            carrossel.classList.add('mostrar-todas');
-        }
-    });
-}
-
-function criarBotaoVerMais(container, carrossel, totalFotos) {
-    const verMaisBtn = document.createElement('button');
-    verMaisBtn.className = 'ver-mais-btn';
-    verMaisBtn.textContent = `Ver mais fotos (${totalFotos - 3}+)`;
-    
-    const containerBtn = document.createElement('div');
-    containerBtn.className = 'ver-mais-container';
-    containerBtn.appendChild(verMaisBtn);
-    
-    container.insertBefore(containerBtn, carrossel.nextSibling);
-    
-    verMaisBtn.addEventListener('click', function() {
-        const estaMostrandoTodas = carrossel.classList.contains('mostrar-todas');
-        
-        if (estaMostrandoTodas) {
-            carrossel.classList.remove('mostrar-todas');
-            this.textContent = `Ver mais fotos (${totalFotos - 3}+)`;
-        } else {
-            carrossel.classList.add('mostrar-todas');
-            this.textContent = 'Ver menos';
-        }
-    });
-}
-
 // Inicializar após carregar
 document.addEventListener('DOMContentLoaded', function() {
     carregarGaleria();
