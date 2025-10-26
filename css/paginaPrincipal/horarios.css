@@ -1,126 +1,213 @@
 #horarios {
-    padding: 40px 5%;
+    padding: 60px 5%;
     background-color: #ffa500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
 }
 
-.horario-calendario-wrapper {
+.horario-info-wrapper {
     display: flex;
-    flex-direction: row;
     gap: 30px;
     max-width: 1200px;
-    margin: 0 auto;
-}
-
-.horario-container,
-.calendario-container {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2),
-        0 15px 20px -10px rgba(0, 0, 0, 0.15);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    align-items: stretch; /* Faz ambos terem mesma altura */
 }
 
 .horario-container {
-    width: 100%;
+    flex: 1;
+    background: white;
+    padding: 25px; /* Reduzido padding */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2),
+                0 15px 20px -10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.calendario-container {
-    width: 70%;
+.info-container {
+    flex: 0 0 350px;
+    display: flex;
+    flex-direction: column;
 }
 
-.horario-container h3,
-.calendario-container h3 {
+.info-box {
+    background: white;
+    padding: 20px; /* Reduzido padding */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2),
+                0 15px 20px -10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    flex: 1; /* Ocupa toda altura disponível */
+    display: flex;
+    flex-direction: column;
+}
+
+.info-content {
+    flex: 1; /* Ocupa espaço restante */
+    display: flex;
+    flex-direction: column;
+}
+
+.horario-container:hover,
+.info-box:hover {
+    box-shadow: 0 15px 40px -5px rgba(0, 0, 0, 0.25),
+                0 20px 25px -10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.horario-container h3 {
     color: #000;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Reduzido */
     text-align: center;
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem); /* Tamanho reduzido */
+    font-weight: bold;
 }
 
-.tabela-horarios,
-.calendario-tabela {
+.info-box h4 {
+    color: orange;
+    margin-bottom: 15px; /* Reduzido */
+    font-size: 1.2rem; /* Tamanho reduzido */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-texto {
+    margin-bottom: 12px; /* Reduzido */
+    line-height: 1.4; /* Linha mais compacta */
+    color: #333;
+    font-size: 0.9rem; /* Texto menor */
+}
+
+/* Níveis das Turmas - Mais Compacto */
+.niveis-turma {
+    margin: 15px 0; /* Reduzido */
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espaço reduzido */
+}
+
+.nivel {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Reduzido */
+    padding: 8px 10px; /* Padding reduzido */
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nivel:hover {
+    background: #e9ecef;
+    transform: translateX(3px); /* Movimento mais sutil */
+}
+
+.nivel-icon {
+    font-size: 1rem; /* Ícone menor */
+    flex-shrink: 0;
+}
+
+.nivel-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.nivel-info strong {
+    color: #2b2b2b;
+    font-size: 0.9rem; /* Texto menor */
+}
+
+.nivel-info span {
+    color: #666;
+    font-size: 0.8rem; /* Texto menor */
+    margin-top: 1px;
+}
+
+/* Alerta - Mais Compacto */
+.info-alerta {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 6px;
+    padding: 12px; /* Padding reduzido */
+    margin-top: 15px; /* Margem reduzida */
+}
+
+.info-alerta p {
+    margin: 0;
+    color: #856404;
+    font-size: 0.85rem; /* Texto menor */
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    line-height: 1.3; /* Linha mais compacta */
+}
+
+/* Tabela - Ajustes para altura igual */
+.tabela-horarios {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
-    font-size: clamp(14px, 1.5vw, 16px);
+    margin-top: 0; /* Removida margem superior */
+    font-size: clamp(15px, 1.6vw, 16px); /* Fonte menor */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1; /* Ocupa espaço restante */
 }
 
 .tabela-horarios th {
     background-color: orange;
     color: white;
-    padding: 12px 8px;
-    text-align: left;
-}
-
-.calendario-tabela th {
-    background-color: #ff8c00;
-    color: #fff;
-    padding: 10px 5px;
-    font-size: clamp(12px, 1.3vw, 14px);
+    padding: 12px 10px; /* Padding reduzido */
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.3px; /* Espaçamento reduzido */
+    font-size: 0.9rem; /* Fonte menor */
 }
 
 .tabela-horarios td {
-    padding: 10px 8px;
+    padding: 10px 8px; /* Padding reduzido */
     border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    font-size: 0.9rem; /* Fonte menor */
 }
 
-.calendario-tabela td {
-    padding: 8px 5px;
-    height: 35px;
+.tabela-horarios tbody tr:hover {
+    background-color: #fff8e1;
 }
 
-.calendario-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-    padding: 0 5px;
+.tabela-horarios tbody tr:last-child td {
+    border-bottom: none;
 }
 
-.calendario-button {
-    background: #f8f9fa;
-    border: 2px solid #e9ecef;
-    border-radius: 8px;
-    width: 35px;
-    height: 35px;
-    color: #495057;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.calendario-button:hover {
-    background: orange;
-    color: white;
-    border-color: #eb922e;
-    transform: scale(1.05);
-}
-
-.calendario-button:active {
-    transform: scale(0.95);
-}
-
-#month-name {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    min-width: 120px;
-}
-
+/* RESPONSIVIDADE */
 @media (max-width: 991px) {
-    .horario-calendario-wrapper {
+    #horarios {
+        padding: 40px 5%;
+    }
+    
+    .horario-info-wrapper {
         flex-direction: column;
         gap: 20px;
     }
-
-    .calendario-container {
+    
+    .info-container {
+        flex: 1;
         width: 100%;
     }
-
-    .tabela-horarios,
-    .calendario-tabela {
-        font-size: 15px;
+    
+    .horario-container,
+    .info-box {
+        padding: 20px; /* Padding mobile reduzido */
+    }
+    
+    .tabela-horarios {
+        font-size: 14px;
     }
 }
 
@@ -128,61 +215,94 @@
     #horarios {
         padding: 30px 15px;
     }
-
+    
     .horario-container,
-    .calendario-container {
-        padding: 20px 15px;
+    .info-box {
+        padding: 18px; /* Mais compacto no mobile */
     }
-
+    
+    .tabela-horarios {
+        font-size: 13px;
+    }
+    
     .tabela-horarios th,
     .tabela-horarios td {
         padding: 8px 6px;
     }
-
-    .calendario-tabela td {
-        padding: 6px 3px;
-        height: 30px;
+    
+    .nivel {
+        padding: 6px 8px; /* Mais compacto */
     }
-
-    .tabela-horarios thead {
-        display: none;
-    }
-
-    .tabela-horarios tr {
-        display: block;
-        margin-bottom: 10px;
-        border-bottom: 2px solid #ddd;
-    }
-
-    .tabela-horarios td {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 8px;
-        text-align: right;
-    }
-
-    .tabela-horarios td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        margin-right: 10px;
-        text-align: left;
+    
+    .info-alerta {
+        padding: 10px;
     }
 }
 
 @media (max-width: 480px) {
-    .calendario-nav button {
-        width: 25px;
-        height: 25px;
+    .horario-container,
+    .info-box {
+        padding: 15px;
     }
-
-    #month-name {
+    
+    /* Layout mobile - tabela vira cards */
+    .tabela-horarios thead {
+        display: none;
+    }
+    
+    .tabela-horarios tbody tr {
+        display: block;
+        margin-bottom: 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 8px;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .tabela-horarios tbody tr:hover {
+        background-color: #fff8e1;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    
+    .tabela-horarios td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 8px;
+        text-align: left;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 0.85rem;
+    }
+    
+    .tabela-horarios td:last-child {
+        border-bottom: none;
+    }
+    
+    .tabela-horarios td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: orange;
+        margin-right: 8px;
         min-width: 100px;
+        font-size: 0.8rem;
     }
+}
 
-    .calendario-tabela th,
-    .calendario-tabela td {
-        padding: 4px 2px;
-        font-size: 12px;
+/* Animações */
+.horario-container,
+.info-box {
+    animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
