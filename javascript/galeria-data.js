@@ -451,6 +451,35 @@ const galeriaData = {
             titulo: "Aula",
             data: "2025",
             alt: "Aula de Pensamento Computacional de 2025"
-        }
-    ]
-};
+        },
+        {
+            src: "images/2025/Unifil -25.webp",
+            titulo: "Formatura 2025",
+            data: "2025",
+            alt: "Formatura Pensamento Computacional de 2025"
+            },
+    {
+        src: "images/2025/Unifil -26.webp",
+        titulo: "Formatura 2025",
+        data: "2025",
+        alt: "Formatura Pensamento Computacional de 2025"
+    },
+    {
+        src: "images/2025/Unifil -857.webp",
+        titulo: "Formatura 2025",
+        data: "2025",
+        alt: "Formatura Pensamento Computacional de 2025"
+    },
+    {
+        src: "images/2025/Unifil -861.webp",
+        titulo: "Formatura 2025",
+        data: "2025",
+        alt: "Formatura Pensamento Computacional de 2025"
+    },
+    {
+        src: "images/2025/Unifil -1268.webp",
+        titulo: "Formatura 2025",
+        data: "2025",
+        alt: "Formatura Pensamento Computacional de 2025"
+    }
+    ]};
