@@ -5,7 +5,7 @@ import './galeriaAnimacoes.js';
 import './tabelaHorarios.js';
 import './pensamentoComputacional.js';
 import './scrollBox.js';
-import './carrosselMonitores.js';
+import './carrosselBanner.js'; 
 import './headerScroll.js';
 import './lightboxMobile.js';
 import './feedbackTouch.js';

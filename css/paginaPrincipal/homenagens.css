@@ -87,7 +87,7 @@
 
 /* ----- BLOCO DO ALUNO DESTAQUE ----- */
 .aluno-destaque {
-    flex: 1; /* 35% aproximado */
+    flex: 1; 
     background-color: #fff;
     border-radius: 20px;
     padding: 1.5rem;
@@ -173,14 +173,12 @@
         display: block;
     }
 
-    /* Cada depoimento no carrossel */
     .depoimentos-mobile .depoimento {
-        box-shadow: none !important;  /* remove sombra */
-        border: none !important;      /* remove borda */
-        background: none;             /* remove fundo (se quiser deixar limpo) */
+        box-shadow: none !important;  
+        border: none !important;      
+        background: none;             
     }
 
-    /* Garante que o texto apareça completo */
     .depoimentos-mobile,
     .depoimentos-mobile .carrossel,
     .depoimentos-mobile .depoimento.ativo {

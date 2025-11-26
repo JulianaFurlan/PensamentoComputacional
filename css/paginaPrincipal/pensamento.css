@@ -91,45 +91,44 @@
     }
 }
 
-/* NOVO: REMOVE BORDAS/SOMBRAS EM TELAS PEQUENAS */
 @media (max-width: 576px) {
 
     #pensamento,
     #porque-fazer {
         padding: 30px 15px;
-        background-color: transparent; /* Remove o fundo cinza das sections */
+        background-color: transparent; 
     }
 
     .pensamento-box {
         padding: 20px;
-        border-radius: 0; /* Remove bordas arredondadas */
-        box-shadow: none; /* Remove sombra */
-        background-color: transparent; /* Remove fundo do box */
-        max-width: 100%; /* Ocupa toda largura */
-        margin-top: 0; /* Remove margem superior */
+        border-radius: 0; 
+        box-shadow: none; 
+        background-color: transparent; 
+        max-width: 100%; 
+        margin-top: 0; 
     }
 
     .pensamento-box h2 {
         font-size: 24px;
         margin-bottom: 20px;
-        text-align: center; /* Mantém centralizado */
+        text-align: center; 
     }
 
     .pensamento-box p {
         text-align: left;
         text-align: justify;
         hyphens: auto;
-        padding: 0 10px 10px 10px; /* Reduz padding */
+        padding: 0 10px 10px 10px; 
     }
 
-    /* Remove efeitos hover em mobile */
+
     .pensamento-box:hover {
         transform: none;
         box-shadow: none;
     }
 }
 
-/* EXTRA: Para telas muito pequenas */
+
 @media (max-width: 400px) {
     #pensamento,
     #porque-fazer {

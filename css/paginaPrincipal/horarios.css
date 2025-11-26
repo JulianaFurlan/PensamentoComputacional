@@ -35,18 +35,18 @@
 
 .info-box {
     background: white;
-    padding: 20px; /* Reduzido padding */
+    padding: 20px; 
     border-radius: 15px;
     box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2),
                 0 15px 20px -10px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
-    flex: 1; /* Ocupa toda altura disponível */
+    flex: 1; 
     display: flex;
     flex-direction: column;
 }
 
 .info-content {
-    flex: 1; /* Ocupa espaço restante */
+    flex: 1; 
     display: flex;
     flex-direction: column;
 }
@@ -60,41 +60,40 @@
 
 .horario-container h3 {
     color: #000;
-    margin-bottom: 20px; /* Reduzido */
+    margin-bottom: 20px; 
     text-align: center;
-    font-size: clamp(1.4rem, 2.5vw, 1.8rem); /* Tamanho reduzido */
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem); 
     font-weight: bold;
 }
 
 .info-box h4 {
     color: orange;
-    margin-bottom: 15px; /* Reduzido */
-    font-size: 1.2rem; /* Tamanho reduzido */
+    margin-bottom: 15px; 
+    font-size: 1.2rem; 
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
 .info-texto {
-    margin-bottom: 12px; /* Reduzido */
-    line-height: 1.4; /* Linha mais compacta */
+    margin-bottom: 12px; 
+    line-height: 1.4; 
     color: #333;
-    font-size: 0.9rem; /* Texto menor */
+    font-size: 0.9rem; 
 }
 
-/* Níveis das Turmas - Mais Compacto */
 .niveis-turma {
-    margin: 15px 0; /* Reduzido */
+    margin: 15px 0; 
     display: flex;
     flex-direction: column;
-    gap: 8px; /* Espaço reduzido */
+    gap: 8px; 
 }
 
 .nivel {
     display: flex;
     align-items: center;
-    gap: 10px; /* Reduzido */
-    padding: 8px 10px; /* Padding reduzido */
+    gap: 10px; 
+    padding: 8px 10px; 
     background: #f8f9fa;
     border-radius: 6px;
     border-left: 3px solid transparent;
@@ -103,11 +102,11 @@
 
 .nivel:hover {
     background: #e9ecef;
-    transform: translateX(3px); /* Movimento mais sutil */
+    transform: translateX(3px); 
 }
 
 .nivel-icon {
-    font-size: 1rem; /* Ícone menor */
+    font-size: 1rem;
     flex-shrink: 0;
 }
 
@@ -118,63 +117,61 @@
 
 .nivel-info strong {
     color: #2b2b2b;
-    font-size: 0.9rem; /* Texto menor */
+    font-size: 0.9rem; 
 }
 
 .nivel-info span {
     color: #666;
-    font-size: 0.8rem; /* Texto menor */
+    font-size: 0.8rem; 
     margin-top: 1px;
 }
 
-/* Alerta - Mais Compacto */
 .info-alerta {
     background: #fff3cd;
     border: 1px solid #ffeaa7;
     border-radius: 6px;
-    padding: 12px; /* Padding reduzido */
-    margin-top: 15px; /* Margem reduzida */
+    padding: 12px; 
+    margin-top: 15px; 
 }
 
 .info-alerta p {
     margin: 0;
     color: #856404;
-    font-size: 0.85rem; /* Texto menor */
+    font-size: 0.85rem; 
     display: flex;
     align-items: flex-start;
     gap: 6px;
-    line-height: 1.3; /* Linha mais compacta */
+    line-height: 1.3; 
 }
 
-/* Tabela - Ajustes para altura igual */
 .tabela-horarios {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 0; /* Removida margem superior */
-    font-size: clamp(15px, 1.6vw, 16px); /* Fonte menor */
+    margin-top: 0; 
+    font-size: clamp(15px, 1.6vw, 16px); 
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     border-radius: 8px;
     overflow: hidden;
-    flex: 1; /* Ocupa espaço restante */
+    flex: 1; 
 }
 
 .tabela-horarios th {
     background-color: orange;
     color: white;
-    padding: 12px 10px; /* Padding reduzido */
+    padding: 12px 10px; 
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 0.3px; /* Espaçamento reduzido */
-    font-size: 0.9rem; /* Fonte menor */
+    letter-spacing: 0.3px; 
+    font-size: 0.9rem; 
 }
 
 .tabela-horarios td {
-    padding: 10px 8px; /* Padding reduzido */
+    padding: 10px 8px; 
     border-bottom: 1px solid #e0e0e0;
     text-align: center;
     transition: background-color 0.2s ease;
-    font-size: 0.9rem; /* Fonte menor */
+    font-size: 0.9rem; 
 }
 
 .tabela-horarios tbody tr:hover {
@@ -203,7 +200,7 @@
     
     .horario-container,
     .info-box {
-        padding: 20px; /* Padding mobile reduzido */
+        padding: 20px; 
     }
     
     .tabela-horarios {
@@ -218,7 +215,7 @@
     
     .horario-container,
     .info-box {
-        padding: 18px; /* Mais compacto no mobile */
+        padding: 18px; 
     }
     
     .tabela-horarios {
@@ -231,7 +228,7 @@
     }
     
     .nivel {
-        padding: 6px 8px; /* Mais compacto */
+        padding: 6px 8px; 
     }
     
     .info-alerta {
@@ -245,7 +242,6 @@
         padding: 15px;
     }
     
-    /* Layout mobile - tabela vira cards */
     .tabela-horarios thead {
         display: none;
     }
@@ -290,7 +286,6 @@
     }
 }
 
-/* Animações */
 .horario-container,
 .info-box {
     animation: fadeInUp 0.6s ease;

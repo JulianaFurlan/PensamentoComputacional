@@ -77,18 +77,13 @@
     </header>
 
 <section id="imagem-banner">
-    <!-- Desktop: Carrossel normal -->
-    <div class="carrossel desktop-banner">
+    <div class="carrossel">
         <div class="slides">
             <img src="images/logos/logoNova.png" alt="Logo Nova do Pensamento Computacional">
             <img src="images/logos/logoAntiga.jpg" alt="Logo Antiga do Pensamento Computacional">
             <img src="images/carrossel/carrossel_foto1.JPG" alt="Formandos de 2024">
             <img src="images/carrossel/carrossel_foto2.JPG" alt="Coordenadores do Pensamento Computacional">
         </div>
-    </div>
-
-    <!--Imagem parallax -->
-    <div class="parallax-mobile mobile-banner">
     </div>
 </section>
 
@@ -613,6 +608,26 @@
 
     <div class="menu-overlay"></div>
 
+    <script>
+        const slides = document.querySelector('.slides');
+const imagens = document.querySelectorAll('.slides img');
+let index = 0;
+
+function passarSlide() {
+    index = (index + 1) % imagens.length;
+    const larguraSlide = imagens[0].clientWidth;
+    slides.style.transform = `translateX(${-index * larguraSlide}px)`;
+}
+
+// Iniciar o carrossel
+setInterval(passarSlide, 3000);
+
+// Ajustar ao redimensionar a janela
+window.addEventListener('resize', () => {
+    const larguraSlide = imagens[0].clientWidth;
+    slides.style.transform = `translateX(${-index * larguraSlide}px)`;
+});
+    </script>
     <script type="module" src="javascript/main.js"></script>
     <script src="javascript/galeria-data.js" defer></script>
     <script src="javascript/galeria-loader.js" defer></script>

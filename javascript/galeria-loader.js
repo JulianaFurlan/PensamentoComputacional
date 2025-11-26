@@ -63,7 +63,6 @@ function criarElementoFoto(foto, ano, index) {
 }
 
 function inicializarLightbox() {
-    // Adiciona evento de clique para todas as imagens
     document.addEventListener('click', function(e) {
         if (e.target.tagName === 'IMG' && e.target.closest('.foto-wrapper')) {
             const img = e.target;
@@ -76,12 +75,10 @@ function inicializarLightbox() {
         }
     });
     
-    // Fechar lightbox
     document.querySelector('.fechar-lightbox').addEventListener('click', function() {
         document.querySelector('.lightbox-mobile').style.display = 'none';
     });
     
-    // Fechar lightbox clicando fora
     document.querySelector('.lightbox-mobile').addEventListener('click', function(e) {
         if (e.target === this) {
             this.style.display = 'none';
@@ -106,7 +103,6 @@ function abrirLightbox(ano, index) {
     }
 }
 
-// Inicializar após carregar
 document.addEventListener('DOMContentLoaded', function() {
     carregarGaleria();
     inicializarLightbox();
@@ -115,18 +111,14 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('resize', inicializarBotoesVerMais);
     }, 100);
 
-    // No final da função carregarGaleria():
 function carregarGaleria() {
-    // ... código existente ...
     
     Object.keys(galeriaData).forEach(ano => {
-        // ... código existente ...
         
-        // Garante que as fotos têm a classe correta
         setTimeout(() => {
             const fotos = container.querySelectorAll('.foto-item');
             fotos.forEach(foto => {
-                foto.classList.add('foto-item'); // Garante a classe
+                foto.classList.add('foto-item');
             });
         }, 50);
     });

@@ -1,9 +1,23 @@
-#imagem-banner {
+#imagem-banner img {
     width: 100%;
+    height: auto;
+    max-height: 58vh;
+    object-fit: cover;
+    display: block;
+    margin-top: 120px;
+    margin-bottom: 40px;
 }
 
-.desktop-banner {
-    display: block;
+@media (max-width: 768px) {
+    #imagem-banner img {
+        margin-top: 90px;
+        max-height: 50vh;
+    }
+
+    .carrossel {
+        border-radius: 0;
+        box-shadow: none;
+    }
 }
 
 .carrossel {
@@ -29,47 +43,18 @@
     flex-shrink: 0;
 }
 
-#imagem-banner img {
-    width: 100%;
-    height: auto;
-    max-height: 58vh;
-    object-fit: cover;
-    display: block;
-    margin-top: 120px;
-    margin-bottom: 40px;
-}
-
-.mobile-banner {
-    display: none;
-}
-
-.parallax-mobile {
-    height: 50vh;
-    background-image: url(/images/logos/ImagemCodigo.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 90px;
-}
-
-/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
-    .desktop-banner {
-        display: none;
+    .carrossel {
+        display: none; 
     }
     
-    .mobile-banner {
-        display: block;
-    }
-}
-
-@media (min-width: 769px) {
-    .desktop-banner {
-        display: block;
+    #imagem-banner {
+        margin-top: 100px; 
+        margin-bottom: 0;
+        height: 0;
     }
     
-    .mobile-banner {
-        display: none;
+    #pensamento {
+        margin-top: 40px !important;
     }
 }
